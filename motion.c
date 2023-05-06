@@ -1,32 +1,29 @@
 #include <stdio.h>
 
 /**
- * main -entry point
- * @u:intial velocity
- * @a:acceleration in metres per seconds squared
- * @t:time in seconds
- * @s:displacement in metres
- * Return: v and s
- */
+* main -entry point
+* @u:intial velocity
+* @a:acceleration in metres per seconds squared
+* @t:time in seconds
+* @s:displacement in metres
+* Return: v and s
+*/
 
 int main(void)
 {
-	int u;
-	int a;
-	int t;
+float u, a, t, s, v;
 
-	printf("Enter u\n");
-	scanf("%d", &u);
-	printf("Enter a\n");
-	scanf("%d", &a);
-	printf("Enter t\n");
-	scanf("%d", &t);
+printf("Enter u\n");
+scanf("%f", &u);
+printf("Enter a\n");
+scanf("%f", &a);
+printf("Enter t\n");
+scanf("%f", &t);
+v = u + (a * t);
+s = (u * t) + (0.5 * a * t * t);
 
-	int v = u + (a * t);
-	int s = (u * t + 1/2 * a * t ^ 2);
-
-	printf("The final velocity is %d\n", v);
-	printf("The displacement is %d\n", s);
+printf("The final velocity is %.1f\n", v);
+printf("The displacement is %.1f\n", s);
 
 
 }
